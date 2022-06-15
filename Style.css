@@ -1,0 +1,543 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box
+;}
+
+/*--------------------Nav--------------------*/
+
+.nav{background: linear-gradient(0deg, rgba(1,89,88,1) 0%, rgba(2,53,53,1) 65%);
+    display: grid; 
+    grid-template-columns: 15% 70%r 15%; 
+    grid-template-rows: 70px 65px; 
+    gap: 0px 00px; 
+    grid-template-areas: 
+      "logo input redirects"
+      "Desplegable List .";}
+
+.logo {display: grid;
+    justify-content: start;
+    align-items: center;
+    grid-area: logo;}
+
+.logo img{width: 60px;
+    margin-left: 15px;}
+
+.input {display: grid;
+    justify-content: center;
+    align-items: center;;
+    grid-area: input;}
+
+.nav input{width: 680px;
+    height: 42px;
+    background: #0CABA8;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    border-radius: 5px;}
+
+.redirects {display: flex;
+    justify-content: end;
+    align-items: center; 
+    grid-area: redirects;}
+
+.redirects a{text-decoration: none;
+    color: white;
+    margin-right: 15px;}
+
+.redirects p{display: inline;}
+
+.Desplegable {color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center; 
+    grid-area: Desplegable;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 15px;}
+
+.Desplegable p{margin-left: 10px;}
+
+.List {display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-area: List;}
+
+.List ul{list-style-type: none;
+    display: flex;}
+
+.List li{text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+
+.List a{text-decoration: none;
+    margin: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    color: white;}
+
+.nav_responsive{display: none;}
+
+@media screen and (max-width: 1200px){
+    .nav p{display: none;}
+    
+    .input input{width: 340px;}
+
+    .redirects i{ font-size: 28px;}}
+
+@media screen and (max-width: 768px){
+
+.nav_responsive{background: linear-gradient(0deg, rgba(1,89,88,1) 0%, rgba(2,53,53,1) 65%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
+
+.input_responsive{padding-left: 45px;}
+
+.nav_responsive img{width: 50px;
+    margin-left: 15px;
+    margin-top: 10px;}
+
+.input_responsive input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: rgba(1,89,88,1);
+    outline: none;
+    border-radius: 30px;
+    transition: all 0.6s ease;}
+
+.input_responsive .btn{position: relative;
+    top: 0px;
+    right: 48px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: rgba(1,89,88,1);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;}
+
+.nav{display: none;}
+
+.input_responsive:hover input{width: 240px;}
+
+.nav_redirects i{margin-right: 20px;
+    color: white;}}
+
+/*--------------------Main--------------------*/
+
+.Main_Section_img{display: grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: rgba(223,223,223,1);
+    grid-template-rows: auto auto auto;
+    grid-template-areas:     "Ofertas Notebook Notebook"
+                             "Ofertas Notebook Notebook"
+                             "Ofertas Horario atencion"
+                             ;
+    padding: 5% 8%; 
+    gap: 30px;}
+
+.Main_Section_img img{height: 100%;
+        width: 100%;}
+
+.Ofertas{grid-area: Ofertas;}
+
+.Notebook{grid-area: Notebook;}
+
+.Horario{grid-area: Horario;}
+
+.Attention{grid-area: Atencion;}
+
+
+/*--------------------Section--------------------*/
+
+.More_Products{height: 1500px;
+    background-color: brown;}
+
+.More_Products img{width: 250px;}
+
+.Cards{
+    display: grid;
+    grid-template-columns: 180%;
+    grid-template-rows: 300px 300px;
+    grid-template-areas: "CardsProducts"
+                         "Peripherals";
+    width: 50%;
+    height: 200px;
+    gap: 100px;}
+
+.Cards_Products{grid-area: CardsProducts;
+    display: flex; }
+
+
+.Cards_Peripherals{grid-area: Peripherals;
+    display: flex;}
+
+
+
+.Cards .btn{width: 150px;
+    height: 35px;
+
+    font-family: 'Alata';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    
+    color: white;
+    background: #023535;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;}
+
+@media screen and (max-width: 1200px){
+    .More_Products{display: none;}}
+
+/*--------------------QS--------------------*/
+
+.Main_QS .Banner img{width: 100%;
+    height: 250px;
+    object-fit: cover;}
+
+.Quienes_Somos{background-color: rgba(223,223,223,1);
+    align-items: center;}
+
+.Quienes_Somos h1{text-align: center;
+    margin: 20px;}
+
+.Quienes_Somos p{margin-top: 20px;
+    width: 60%;
+    margin: 0px 20px;
+    display: inline-block;}
+
+.Quienes_Somos img{width: 400px;
+    height: 400px;}
+
+.Nosotros{display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 30px;}
+
+.ComoTrabajamos{display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin:30px 30px 0px}
+
+@media screen and (max-width: 1200px){
+.Nosotros{flex-direction: column;
+    align-items: center;}
+    
+.Nosotros p{width: 100%;
+    margin-bottom: 20px;}
+
+.ComoTrabajamos{flex-direction: column;
+    align-items: center;}
+    
+.ComoTrabajamos p{width: 100%;
+order: 1;}
+
+.ComoTrabajamos IMG{order: 2;
+    margin-top: 20px;}
+    
+.Main_QS .Banner img{height: 170px;}
+
+    
+}
+
+@media screen and (max-width:768px){
+    .Main_QS .Banner img{height: 120px;}}
+
+/*--------------------FAQ--------------------*/
+
+.FAQ{display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(223,223,223,1);}
+
+.FAQ img{width: 100%;
+    height: 250px;
+    }
+
+.FAQ .container{width: 85%;
+    text-align: center;
+    padding-bottom: 100px;}
+
+.FAQ h1{ margin: 50px;}
+
+.FAQ ul{
+    display: flex;
+    flex-direction: column;}
+
+.FAQ li{
+    background-color: white;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(1,89,88,1);
+    padding: 20px 10px 20px 10px;}
+
+@media screen and (max-width: 1200px){
+    .FAQ img{height: 170px;}}
+    
+@media screen and (max-width: 768px){
+    .FAQ img{height: 120px;}
+    
+}
+
+/*--------------------PP--------------------*/
+
+.PP{background-color: rgba(223,223,223,1);;}
+
+.PP h1{text-align: center;
+    padding: 20px 0px 20px 0px;}
+
+.PP .PP_contenido{width: 95%;
+    text-align: left;
+    margin-left: 2%;}
+
+.PP p{padding-bottom: 20px;}
+
+.PP h4{ font-size: 30px;}
+    
+/*--------------------MyCuenta--------------------*/
+
+.Mi_Cuenta {display: flex;
+
+    background-color: rgba(223,223,223,1);
+    padding: 3%;}
+
+.Input_Form{display: flex;
+    padding: 1%;
+    flex-direction: column;
+    align-items: center;
+    width: 1280px;
+    height: 778px;
+    background: #D9D9D9;
+    box-shadow: -2px 3px 12px 9px rgba(0, 0, 0, 0.25);}
+
+.Input_Form .Input_Form_LogIn{width: 680px;
+    height: 72px;
+    
+    background: #015958;
+    border-radius: 5px;
+    color: white;
+    margin-top: 100px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 28px;}
+
+.Input_Form input{width: 680px;
+    height: 42px;
+    
+    background: #0CABA8;
+    border-radius: 5px;
+    color: white;
+    margin-top: 70px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;}
+
+.BannerMA img{display: none;
+    width: 100%;
+    height: 250px;}
+
+.Mi_Cuenta .VerticalBanner{width: 27%;
+    height: 100%;
+    margin-left: 5%;}
+
+.Input_Form .Redirects{display: flex;
+    list-style-type: none;
+    width: 660px;
+    margin-top: 10px;
+    justify-content: space-between;}
+
+.Input_Form .icon{display: flex;
+    width: 300px;
+    list-style-type: none;
+justify-content: space-between;}
+
+.Input_Form a{text-decoration: none;}
+
+.Input_Form i{color: rgba(1,89,88,1);}
+
+.Input_Form p{display: inline;
+    margin: 5%;
+    font-size: 200%;}
+
+@media screen and (max-width: 1200px){
+    .Mi_Cuenta img{display: none;}
+    
+    .BannerMA img{display: inline;
+    width: 100%;
+    height: 170px;
+    object-fit: fill;}}
+
+@media screen and (max-width:840px){
+.BannerMA img{width: 100%;
+    height: 120px;}
+
+.Input_Form input{width: 500px;}
+
+.Input_Form .Input_Form_LogIn{width: 500px;}
+.Input_Form .Redirects{width: 480px;}}
+
+/*--------------------registrarse--------------------*/
+
+.Registrarse_Main {display: flex;
+    background-color: rgba(223,223,223,1);
+    padding:3%;}
+
+.Registrarse_Banner--Horizontal{display: none;}
+
+.Input_Form--Register{display: flex;
+    padding: 1%;
+    flex-direction: column;
+    align-items: center;
+    width: 1280px;
+    height: 778px;
+    background: #D9D9D9;
+    box-shadow: -2px 3px 12px 9px rgba(0, 0, 0, 0.25);}
+
+.Flex-reg{width: 50%px;
+    height: 400px;
+    margin-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;}
+
+.Flex-reg input{display: flex;
+    flex-wrap: wrap;
+    width: 420px;
+    height: 42px;
+    margin: 15px;
+    
+    background: #0CABA8;
+    border-radius: 5px;
+    color: white;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;}
+
+.Input_Form--Register .btn{width: 680px;
+    height: 72px;
+    margin-top: 20px;
+    
+    background: #015958;
+    border-radius: 5px;
+    color: white;
+    
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 28px;}
+
+.Flex-reg Select{display: flex;
+        flex-wrap: wrap;
+        width: 420px;
+        height: 42px;
+        margin: 15px;
+        
+        background: #0CABA8;
+        border-radius: 5px;
+        color: white;
+    
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;}
+
+
+.Input_Form--Register i{color: rgba(1,89,88,1);}
+
+.Input_Form--Register ul{width: 300px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;}
+
+.Input_Form--Register p{
+    text-align: center;
+    margin: 5%;
+    font-size: 200%;}
+
+.Registrarse_Main img{width: 27%;
+    height: 100%;
+    margin-left: 5%;}
+
+@media screen and (max-width:1516px){
+    .Registrarse_Banner--Vertical{display: none;}
+    .Registrarse_Banner--Horizontal{display: unset;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;}
+
+}
+@media screen and (max-width:1200px){
+.Registrarse_Banner--Horizontal{height: 170px;}}
+
+@media screen and (max-width: 994px){
+
+.Input_Form--Register{ height: 1000px;}
+
+.Input_Form--Register .btn{width: 500px;
+    margin-top: 220px;}}
+
+@media screen and (max-width: 768px){
+    .Registrarse_Banner--Horizontal{height: 120px;}}
+
+/*--------------------Footer--------------------*/
+
+.footer{background-color: rgba(217,217,217,1);}
+
+.footer .container{display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px}
+
+.Info a{display: block;
+    text-decoration: none;}
+
+.Redes{display: flex;
+    flex-direction: column;
+    align-items: center;}
+
+.Redes i{color: rgba(1,89,88,1);}
+
+.Copy{position: relative;
+    bottom: 0px;
+    left: 0px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+
+    color: white;}
+
+@media screen and (max-width: 768px) {
+.footer .container{text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(217,217,217,1);
+    }
+
+.Info{border-bottom: 2px solid rgba(1,89,88,1);
+        padding-bottom: 20px;
+    order:2; 
+    margin: 20px;}
+
+.Contact{order: 3;
+    margin: 20px;}
+
+.Redes{border-bottom: 2px solid rgba(1,89,88,1);
+    padding-bottom: 20px;}
+
+.Redes_i {display: flex;
+    flex-direction: row;
+    justify-content: center;
+    order: 1;
+    margin-top: 20px;}
+
+.Copy{background-color: rgba(217,217,217,1);}}
